@@ -1,0 +1,14 @@
+
+#+TITLE:    Org Mode Invoice Template
+#+AUTHOR:	Jaxson Van Doorn
+#+EMAIL:	jaxson.vandoorn@gmail.com
+#+OPTIONS:  num:nil toc:nil
+
+
+A set of Org and LaTeX files that generates a invoice using Org clock reports.
+
+The ~org-plus-contrib~ package can be used to exclude titles from the TOC with the following export settings:
+#+BEGIN_SRC emacs-lisp
+(require 'ox-extra)
+(ox-extras-activate '(ignore-headlines))
+#+END_SRC
