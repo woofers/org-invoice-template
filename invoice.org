@@ -42,6 +42,10 @@
 #+END_EXPORT
 
 {{{INVOICE_ID}}}
+#+BEGIN_EXPORT latex
+\pair{Services}{}
+\vspace{-0.5in}
+#+END_EXPORT
 
 #+BEGIN: clocktable :scope file :maxlevel 3
 #+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
