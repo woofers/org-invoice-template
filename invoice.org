@@ -54,15 +54,15 @@
 #+END_EXPORT
 
 #+BEGIN: clocktable :scope file :maxlevel 3
-#+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
 #+TBLNAME: services
+#+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount ($)")::@2$6..@>$6=$rate::@1$6=string("Rate ($)")
 #+END:
 
 #+BEGIN: table
 #+ATTR_LaTeX: :center nil
-| Total Due($) |
-|--------------|
-| VX.ZY        |
+| Total Due ($) |
+|---------------|
+| VX.ZY         |
 #+TBLFM: @2$1=remote(services, @2$5)
 #+END:
 
