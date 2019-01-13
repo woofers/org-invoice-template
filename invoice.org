@@ -3,6 +3,11 @@
 #+Author: Jaxson Van Doorn
 
 #+OPTIONS: toc:nil title:nil num:nil
+
+#+BEGIN: clocktable :scope file :maxlevel 3
+#+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")
+#+END:
+
 * Work :noexport:
 ** TODO X
    :LOGBOOK:
