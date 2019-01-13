@@ -4,8 +4,10 @@
 
 #+OPTIONS: toc:nil title:nil num:nil
 
+
+#+CONSTANTS: rate=20
 #+BEGIN: clocktable :scope file :maxlevel 3
-#+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")
+#+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
 #+END:
 
 * Work :noexport:
