@@ -31,3 +31,19 @@
 ** TODO Z
 *** TODO Code Review Z
    CLOCK: [2019-01-12 Sat 1:13]--[2019-01-12 Sat 1:23] =>  0:10
+* Lisp :noexport:
+
+#+NAME: startup
+#+BEGIN_SRC emacs-lisp
+(defadvice org-table-goto-column
+    (before
+     always-make-new-columns
+     (n &optional on-delim force)
+     activate)
+  "always adds new columns when we move to them"
+  (setq force t))
+#+END_SRC
+
+# Local Variables:
+# eval: (progn (org-babel-goto-named-src-block "startup") (org-babel-execute-src-block) (outline-hide-sublevels 1))
+# End:
