@@ -5,7 +5,21 @@
 #+OPTIONS: toc:nil title:nil num:nil
 
 
+#+MACRO: FIRST     Jaxson
+#+MACRO: LAST      Van Doorn
+#+MACRO: FULL      {{{FIRST}}} {{{LAST}}}
+#+MACRO: EMAIL     jaxson.vandoorn@gmail.com
+#+MACRO: ADDRESS1  8636 Sentinel Place
+#+MACRO: ADDRESS2  North Saanich, BC
+#+MACRO: ADDRESS3  V8L 4Z8
+#+MACRO: TITLE     Invoice
+
 #+CONSTANTS: rate=20
+
+#+MACRO: CLIENT_NAME Woofers Inc
+#+MACRO: CLIENT_ADDRESS1 1234 Woof Street
+#+MACRO: CLIENT_ADDRESS2 Dog City, BC
+#+MACRO: CLIENT_ADDRESS3 W9B 2D5
 #+BEGIN: clocktable :scope file :maxlevel 3
 #+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
 #+END:
