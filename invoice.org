@@ -34,6 +34,11 @@
 {{{HEADER}}}
 
 {{{INVOICE_TO}}}
+
+#+BEGIN_EXPORT latex
+\pair{Date}{\today}
+#+END_EXPORT
+
 #+BEGIN: clocktable :scope file :maxlevel 3
 #+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
 #+END:
