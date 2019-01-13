@@ -11,6 +11,7 @@
 #+LATEX_HEADER: \parskip 0.1in
 #+LATEX_HEADER: \newcommand{\indent}{\tab}
 #+LATEX_HEADER: \newcommand{\pair}[2]{{\bf #1:} \\ \indent #2 \\}
+#+LATEX_HEADER: \pagenumbering{gobble}
 
 #+MACRO: FIRST     Jaxson
 #+MACRO: LAST      Van Doorn
