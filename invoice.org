@@ -24,6 +24,8 @@
 #+MACRO: HEADER    {{{HEADER1}}} \newline {{{HEADER2}}} \newline
 
 #+CONSTANTS: rate=20
+#+MACRO: INVOICE_NUMBER 1
+#+MACRO: INVOICE_ID \pair{Invoice Number}{#{{{INVOICE_NUMBER}}}}
 
 #+MACRO: CLIENT_NAME Woofers Inc
 #+MACRO: CLIENT_ADDRESS1 1234 Woof Street
@@ -38,6 +40,8 @@
 #+BEGIN_EXPORT latex
 \pair{Date}{\today}
 #+END_EXPORT
+
+{{{INVOICE_ID}}}
 
 #+BEGIN: clocktable :scope file :maxlevel 3
 #+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
