@@ -29,8 +29,11 @@
 #+MACRO: CLIENT_ADDRESS1 1234 Woof Street
 #+MACRO: CLIENT_ADDRESS2 Dog City, BC
 #+MACRO: CLIENT_ADDRESS3 W9B 2D5
+#+MACRO: INVOICE_TO \pair{Invoice To}{{{{CLIENT_NAME}}} \newline \indent {{{CLIENT_ADDRESS1}}} \newline \indent {{{CLIENT_ADDRESS2}}} \newline \indent {{{CLIENT_ADDRESS3}}}}
 
 {{{HEADER}}}
+
+{{{INVOICE_TO}}}
 #+BEGIN: clocktable :scope file :maxlevel 3
 #+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
 #+END:
