@@ -19,6 +19,9 @@
 #+MACRO: ADDRESS2  North Saanich, BC
 #+MACRO: ADDRESS3  V8L 4Z8
 #+MACRO: TITLE     Invoice
+#+MACRO: HEADER1   \hfil{\Huge\bf {{{TITLE}}}}\hfil\bigskip\break\hrule {{{ADDRESS1}}} \hfill {{{FULL}}}
+#+MACRO: HEADER2   {{{ADDRESS2}}} {{{ADDRESS3}}} \hfill {{{EMAIL}}}
+#+MACRO: HEADER    {{{HEADER1}}} \newline {{{HEADER2}}} \newline
 
 #+CONSTANTS: rate=20
 
@@ -26,6 +29,8 @@
 #+MACRO: CLIENT_ADDRESS1 1234 Woof Street
 #+MACRO: CLIENT_ADDRESS2 Dog City, BC
 #+MACRO: CLIENT_ADDRESS3 W9B 2D5
+
+{{{HEADER}}}
 #+BEGIN: clocktable :scope file :maxlevel 3
 #+TBLFM: @2$5..@>$5=vsum($2..$4)*$rate;t::@1$5=string("Amount($)")::@2$6..@>$6=$rate::@1$6=string("Rate($)")
 #+END:
