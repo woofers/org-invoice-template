@@ -5,6 +5,7 @@
 #+OPTIONS: toc:nil title:nil num:nil
 
 #+LATEX_HEADER: \usepackage[letterpaper,tmargin=0.5in,bmargin=1.0in,lmargin=1.0in,rmargin=1.0in,headheight=0in,headsep=0in,footskip=0.0in]{geometry}
+#+LATEX_HEADER: \usepackage[labelformat=empty, textformat=empty]{caption}
 #+LATEX_HEADER: \parindent 0in
 #+LATEX_HEADER: \parskip 0.1in
 
