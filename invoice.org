@@ -8,6 +8,8 @@
 #+LATEX_HEADER: \usepackage[labelformat=empty, textformat=empty]{caption}
 #+LATEX_HEADER: \parindent 0in
 #+LATEX_HEADER: \parskip 0.1in
+#+LATEX_HEADER: \newcommand{\indent}{\tab}
+#+LATEX_HEADER: \newcommand{\pair}[2]{{\bf #1:} \\ \indent #2 \\}
 
 #+MACRO: FIRST     Jaxson
 #+MACRO: LAST      Van Doorn
