@@ -1,0 +1,21 @@
+* Work
+** TODO X
+   :LOGBOOK:
+   CLOCK: [2019-01-12 Sat 22:13]--[2019-01-12 Sat 23:13] =>  1:00
+   :END:
+*** TODO Implement X
+   :LOGBOOK:
+   CLOCK: [2019-01-12 Sat 22:13]--[2019-01-12 Sat 23:13] =>  1:00
+   :END:
+** TODO Y
+*** TODO Implement Y
+   :LOGBOOK:
+   CLOCK: [2019-01-12 Sat 19:00]--[2019-01-12 Sat 19:20] =>  0:20
+   :END:
+*** TODO Debug Y
+   :LOGBOOK:
+   CLOCK: [2019-01-12 Sat 23:13]--[2019-01-12 Sat 23:59] =>  0:46
+   :END:
+** TODO Z
+*** TODO Code Review Z
+   CLOCK: [2019-01-12 Sat 1:13]--[2019-01-12 Sat 1:23] =>  0:10
