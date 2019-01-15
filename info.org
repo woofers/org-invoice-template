@@ -1,0 +1,45 @@
+
+# Consultant Info
+#+MACRO: FIRST     Jaxson
+#+MACRO: LAST      Van Doorn
+#+MACRO: FULL      {{{FIRST}}} {{{LAST}}}
+#+MACRO: EMAIL     jaxson.vandoorn@gmail.com
+#+MACRO: ADDRESS1  8636 Sentinel Place
+#+MACRO: ADDRESS2  North Saanich, BC
+#+MACRO: ADDRESS3  V8L 4Z8
+
+# Client Info
+#+MACRO: CLIENT_NAME      Woofers Inc
+#+MACRO: CLIENT_ADDRESS1  1234 Woof Street
+#+MACRO: CLIENT_ADDRESS2  Dog City, BC
+#+MACRO: CLIENT_ADDRESS3  W9B 2D5
+
+# Properties
+#+MACRO: TITLE           Invoice
+#+MACRO: INVOICE_NUMBER  1
+#+MACRO: PAY_BY_DAYS     30
+#+MACRO: INVOICE_DAY     \today
+
+# Consultant Header
+#+MACRO: HEADER1  \hfil{\Huge\bf {{{TITLE}}}}\hfil\bigskip\break\hrule {{{ADDRESS1}}} \hfill {{{FULL}}}
+#+MACRO: HEADER2  {{{ADDRESS2}}} {{{ADDRESS3}}} \hfill {{{EMAIL}}}
+#+MACRO: HEADER   {{{HEADER1}}} \newline {{{HEADER2}}} \newline
+
+# Invoice To Box
+#+MACRO: INVOICE_TO  \pair{Invoice To}{{{{CLIENT_NAME}}} \newline \indent {{{CLIENT_ADDRESS1}}} \newline \indent {{{CLIENT_ADDRESS2}}} \newline \indent {{{CLIENT_ADDRESS3}}}}
+
+# Send and Pay By Date
+#+MACRO: SENT_ON  \pair{Date}{{{{INVOICE_DAY}}}}
+#+MACRO: PAY_BY   \pair{Pay By}{\AdvanceDate[{{{PAY_BY_DAYS}}}]{{{INVOICE_DAY}}}}
+#+MACRO: DATE     {{{SENT_ON}}} \newline {{{PAY_BY}}}
+
+# Invoice Number
+#+MACRO: INVOICE_ID \pair{Invoice Number}{\#{{{INVOICE_NUMBER}}}}
+
+{{{HEADER}}}
+
+{{{INVOICE_TO}}}
+
+{{{DATE}}}
+
+{{{INVOICE_ID}}}
