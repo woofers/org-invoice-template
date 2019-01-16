@@ -4,7 +4,7 @@
 
 #+OPTIONS: toc:nil title:nil num:nil
 
-#+LaTeX_HEADER: \usepackage{config}
+#+LaTeX_HEADER: \usepackage{../src/config}
 
 #+INCLUDE: info.org
 
