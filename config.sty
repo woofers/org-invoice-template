@@ -1,0 +1,29 @@
+
+% Decrease Margins
+\usepackage[letterpaper,
+            tmargin=0.5in,
+            bmargin=1.0in,
+            lmargin=1.0in,
+            rmargin=1.0in,
+            headheight=0in,
+            headsep=0in,
+            footskip=0.0in]{geometry}
+
+% Hide Table Captions
+\usepackage[labelformat=empty, textformat=empty]{caption}
+
+% Calculate Date Dynamical
+\usepackage{advdate}
+
+% Hide Columns Using Align H
+\usepackage{array}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+% Remove Paragraph Indenting
+\parindent 0in
+\parskip 0.1in
+
+% Aliases
+\newcommand{\indent}{\tab}
+\newcommand{\pair}[2]{{\bf #1:} \\ \indent #2 \\}
+\pagenumbering{gobble}
