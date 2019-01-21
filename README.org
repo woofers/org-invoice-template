@@ -11,3 +11,17 @@ This template is heavily based on the template created by [[http://notes.secrets
 
 The styling is based on [[https://github.com/treyhunner/invoices][Trey Hunner's invoice template]].
 
+* Usage
+
+Simply start clocking time using Org clocks in ~content/timesheet.org~.
+The file should already contain an example timesheet.
+
+Then edit ~content/info.org~ to include the correct date, consultant and client info.
+
+Then when it's time to generate the invoice, go into ~content/invoice.org~
+and run ~org-dblock-update~ on the first table to create the /Services Breakdown/
+out of the timesheet info.
+
+Then go to the next table and run ~org-table-recalculate~ to update the /Balence Due/ field.
+
+Finally, export ~content/invoice.org~ as a LaTex PDF to output the completed invoice.
