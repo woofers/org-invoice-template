@@ -7,6 +7,10 @@
 
 A set of Org and LaTeX files that generates an invoice using Org clock reports.
 
+#+NAME: Example Invoice
+#+ATTR_HTML: :alt Example Invoice :style margin-left: auto; margin-right: auto;
+[[./examples/invoice.png]]
+
 This template is heavily based on the template created by [[http://notes.secretsauce.net/notes/2014/10/01_org-mode-for-invoices.html][Dima Kogan's blog]].
 
 The styling is based on [[https://github.com/treyhunner/invoices][Trey Hunner's invoice template]].
