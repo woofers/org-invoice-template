@@ -5,10 +5,23 @@
 #+OPTIONS:  num:nil toc:nil
 
 
-A set of Org and LaTeX files that generates a invoice using Org clock reports.
+A set of Org and LaTeX files that generates an invoice using Org clock reports.
 
-The ~org-plus-contrib~ package can be used to exclude titles from the TOC with the following export settings:
-#+BEGIN_SRC emacs-lisp
-(require 'ox-extra)
-(ox-extras-activate '(ignore-headlines))
-#+END_SRC
+This template is heavily based on the template created by [[http://notes.secretsauce.net/notes/2014/10/01_org-mode-for-invoices.html][Dima Kogan's blog]].
+
+The styling is based on [[https://github.com/treyhunner/invoices][Trey Hunner's invoice template]].
+
+* Usage
+
+Simply start clocking time using Org clocks in ~content/timesheet.org~.
+The file should already contain an example timesheet.
+
+Then edit ~content/info.org~ to include the correct date, consultant and client info.
+
+Then when it's time to generate the invoice, go into ~content/invoice.org~
+and run ~org-dblock-update~ on the first table to create the /Services Breakdown/
+out of the timesheet info.
+
+Then go to the next table and run ~org-table-recalculate~ to update the /Balence Due/ field.
+
+Finally, export ~content/invoice.org~ as a LaTex PDF to output the completed invoice.
