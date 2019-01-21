@@ -5,10 +5,9 @@
 #+OPTIONS:  num:nil toc:nil
 
 
-A set of Org and LaTeX files that generates a invoice using Org clock reports.
+A set of Org and LaTeX files that generates an invoice using Org clock reports.
 
-The ~org-plus-contrib~ package can be used to exclude titles from the TOC with the following export settings:
-#+BEGIN_SRC emacs-lisp
-(require 'ox-extra)
-(ox-extras-activate '(ignore-headlines))
-#+END_SRC
+This template is heavily based on the template created by [[http://notes.secretsauce.net/notes/2014/10/01_org-mode-for-invoices.html][Dima Kogan's blog]].
+
+The styling is based on [[https://github.com/treyhunner/invoices][Trey Hunner's invoice template]].
+
