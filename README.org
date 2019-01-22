@@ -23,9 +23,9 @@ The file should already contain an example timesheet.
 Then edit ~content/info.org~ to include the correct date, consultant and client info.
 
 Then when it's time to generate the invoice, go into ~content/invoice.org~
-and run ~org-dblock-update~ on the first table to create the /Services Breakdown/
-out of the timesheet info.
+and run ~org-invoice-generate~.
 
-Then go to the next table and run ~org-table-recalculate~ to update the /Balence Due/ field.
+All of the info from the timesheet should be used to
+fill-in the /Services Breakdown/ and /Balance Due/ fields.
 
 Finally, export ~content/invoice.org~ as a LaTex PDF to output the completed invoice.
