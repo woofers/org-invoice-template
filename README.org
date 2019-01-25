@@ -5,13 +5,13 @@
 #+OPTIONS:  num:nil toc:nil
 
 
-A set of Org and LaTeX files that generates an invoice using Org clock reports.
+A set of Org and LaTeX files which generate invoices using Org clock reports.
 
 #+NAME: Example Invoice
 #+ATTR_HTML: :alt Example Invoice :style margin-left: auto; margin-right: auto;
 [[./examples/invoice.png]]
 
-This template is heavily based on the template created by [[http://notes.secretsauce.net/notes/2014/10/01_org-mode-for-invoices.html][Dima Kogan's blog]].
+This template is heavily based on the template shown on [[http://notes.secretsauce.net/notes/2014/10/01_org-mode-for-invoices.html][Dima Kogan's blog]].
 
 The styling is based on [[https://github.com/treyhunner/invoices][Trey Hunner's invoice template]].
 
@@ -25,7 +25,7 @@ Then edit ~content/info.org~ to include the correct date, consultant and client 
 Then when it's time to generate the invoice, go into ~content/invoice.org~
 and run ~org-invoice-generate~.
 
-All of the info from the timesheet should be used to
+All of the info from the timesheet will be used to
 fill-in the /Services Breakdown/ and /Balance Due/ fields.
 
-Finally, export ~content/invoice.org~ as a LaTex PDF to output the completed invoice.
+Finally, export ~content/invoice.org~ as a LaTeX PDF to output the completed invoice.
