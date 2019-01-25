@@ -17,7 +17,7 @@
 
 #+TBLNAME: services
 #+BEGIN: clocktable :scope ("timesheet.org") :maxlevel 3
-#+ATTR_LATEX: :align Hlllll
+#+ATTR_LATEX: :align Hllllll
 #+TBLFM: @2$6..@>$6=vsum($2..$5)*$rate;t::@1$6=string("Amount ($)")::@2$7..@>$7=$rate::@1$7=string("Rate ($)")
 #+END:
 
@@ -45,16 +45,44 @@
     "Always adds new columns for table formulae"
     (setq force t))
 
-  ; Generate Services Breakdown
+  ; Ignore Lisp Code in Search
   (beginning-of-buffer)
-  (search-forward "#+TBLNAME: services")
-  (forward-line 1)
-  (org-dblock-update)
+  (search-forward "#+NAME: startup")
+  (let ((pos (point)))
+    (beginning-of-buffer)
 
-  ; Update Balance Due
-  (search-forward "#+BEGIN: table")
-  (forward-line 2)
-  (org-table-recalculate)
+    ; Search for LaTex Attributes
+    (search-forward "#+TBLNAME: services" pos)
+    (let ((latex (condition-case nil
+      (search-forward "#+ATTR_LATEX:" pos)
+      (error nil))))
+
+      ; Copy LaTeX Attributes
+      ; (`org-prepare-dblock` removes them
+      ;  as they are inside the dblock)
+      (if latex
+        (progn
+          (move-beginning-of-line 1)
+          (kill-line)))
+
+      ; Generate Services Breakdown
+      (search-backward "#+TBLNAME: services")
+      (forward-line 1)
+      (org-dblock-update)
+
+      ; Restore LaTeX Attributes
+      (if latex
+        (progn
+          (forward-line 1)
+          (yank)
+          (newline)))
+    )
+
+    ; Update Balance Due
+    (search-forward "#+BEGIN: table")
+    (forward-line 2)
+    (org-table-recalculate)
+  )
 
   ; Deactivate Org Column Advice
   (ad-deactivate 'org-table-goto-column))
