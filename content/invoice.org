@@ -45,6 +45,9 @@
     "Always adds new columns for table formulae"
     (setq force t))
 
+  ; Save Cursor Position
+  (point-to-register ?a)
+
   ; Ignore Lisp Code in Search
   (beginning-of-buffer)
   (search-forward "#+NAME: startup")
@@ -85,7 +88,11 @@
   )
 
   ; Deactivate Org Column Advice
-  (ad-deactivate 'org-table-goto-column))
+  (ad-deactivate 'org-table-goto-column)
+
+  ; Restore Cursor Position
+  (jump-to-register ?a))
+
 #+END_SRC
 
 # Local Variables:
