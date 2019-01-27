@@ -29,3 +29,9 @@ All of the info from the timesheet will be used to
 fill-in the /Services Breakdown/ and /Balance Due/ fields.
 
 Finally, export ~content/invoice.org~ as a LaTeX PDF to output the completed invoice.
+
+The process should look something like this:
+
+#+NAME: Invoice Generation
+#+ATTR_HTML: :alt Invoice Generation :style margin-left: auto; margin-right: auto;
+[[./screenshots/emacs.gif]]
