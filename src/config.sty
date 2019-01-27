@@ -19,11 +19,18 @@
 \usepackage{array}
 \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
 
-% Remove Paragraph Indenting
-\parindent 0in
+% Increase Space Between Paragraphs
 \parskip 0.1in
 
+% Increase Line Spacing
+\linespread{1.1}
+
+% Manual Indent
+\newlength\tindent
+\setlength{\tindent}{10pt}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
+
 % Aliases
-\renewcommand{\indent}{\quad}
-\newcommand{\pair}[2]{{\bf #1:} \\ \indent #2 \\}
+\newcommand{\pair}[2]{\noindent {\bf #1:} \vspace{5pt} \\ \indent #2 \\}
 \pagenumbering{gobble}
