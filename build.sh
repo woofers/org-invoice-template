@@ -22,4 +22,4 @@ mv $SRC.pdf $DEST.pdf
 # Convert to PNG
 convert -density 300 -background white -alpha off $DEST.pdf $DEST.png
 convert -geometry 800x +repage $DEST.png $DEST.png
-convert $DEST.png +repage -gravity North -crop 800x850+0+0 +repage $DEST.png
+convert $DEST.png +repage -gravity North -crop 800x950+0+0 +repage $DEST.png
