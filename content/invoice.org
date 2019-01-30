@@ -17,7 +17,7 @@
 
 #+TBLNAME: services
 #+BEGIN: clocktable :scope ("timesheet.org") :maxlevel 3
-#+ATTR_LATEX: :align Hllllll
+#+ATTR_LATEX: :align Hllllll :environment longtable
 #+TBLFM: @2$6..@>$6=vsum($2..$5)*$rate;t::@1$6=string("Amount ($)")::@2$7..@>$7=$rate::@1$7=string("Rate ($)")
 #+END:
 
