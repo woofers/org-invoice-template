@@ -15,13 +15,13 @@
 #+MACRO: CLIENT_ADDRESS3  W9B 2D5
 
 # Properties
-#+MACRO: TITLE           Invoice
+#+MACRO: HEADER_TITLE    Invoice
 #+MACRO: INVOICE_NUMBER  1
 #+MACRO: PAY_BY_DAYS     30
 #+MACRO: INVOICE_DAY     \today
 
 # Consultant Header
-#+MACRO: HEADER1  \hfil{\Huge\bf {{{TITLE}}}}\hfil\bigskip\break\hrule {{{ADDRESS1}}} \hfill {{{FULL}}}
+#+MACRO: HEADER1  \hfil{\Huge\bf {{{HEADER_TITLE}}}}\hfil\bigskip\break\hrule {{{ADDRESS1}}} \hfill {{{FULL}}}
 #+MACRO: HEADER2  {{{ADDRESS2}}} {{{ADDRESS3}}} \hfill {{{EMAIL}}}
 #+MACRO: HEADER   {{{HEADER1}}} \newline {{{HEADER2}}} \newline
 
